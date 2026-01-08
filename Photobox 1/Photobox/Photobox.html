@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Photobox App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<link rel="stylesheet" href="photo.css">
+</head>
+
+<body>
+<div class="container">
+  <h1>📸 Custom Photobox</h1>
+
+  <div class="photobox">
+    <div class="preview">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+      <div id="timer">3</div>
+    </div>
+
+    <div class="controls">
+      <select id="count">
+        <option value="3">3 Photos</option>
+        <option value="6">6 Photos</option>
+      </select>
+
+      <button onclick="startCamera()">Start Camera</button>
+      <button onclick="startSession()">Start Capture</button>
+    </div>
+  </div>
+
+  <div class="strip" id="strip"></div>
+  <div id="qr"></div>
+
+  <label>Pilih Frame</label>
+<select id="frameSelect">
+  <option value="">Tanpa Frame</option>
+  <option value="frames/frane Photobox RC">Frame Merah</option>
+  <option value="frames/frame-3-vintage.png">Frame Vintage</option>
+  <option value="frames/frame-3-party.png">Frame Party</option>
+</select>
+
+<img id="framePreview" style="width:200px;margin-top:10px;">
+
+<div class="preview">
+  <video id="video" autoplay playsinline></video>
+  <canvas id="canvas"></canvas>
+  <img id="frameOverlay" class="frame-overlay">
+  <div id="timer">3</div>
+  <img id="frameOverlay" class="frame-overlay" src="">
+</div>
+
+<button onclick="downloadStrip()">Download Photo</button>
+
+</div>
+<script src="photo.js"></script>
+</body>
+</html>
